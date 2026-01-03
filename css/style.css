@@ -17,14 +17,19 @@ html, body {
   left: 0;
   width: 300px;
   height: 100vh;
-  background: #333;
   display: flex;
   flex-direction: column;
+
+  /* fundo temporário para debug */
+  background: #333;
 }
 
 .menu-btn {
   flex: 1;
   width: 100%;
+
+  /* debug visual (REMOVER depois) */
+  outline: 1px solid rgba(255,255,255,0.3);
 }
 
 /* BANNER SUPERIOR */
@@ -35,19 +40,24 @@ html, body {
   height: 120px;
   width: calc(100% - 300px);
   display: flex;
+
+  /* fundo temporário para debug */
   background: #555;
 }
 
 .top-btn {
   flex: 1;
   height: 100%;
+
+  /* debug visual (REMOVER depois) */
+  outline: 1px solid rgba(255,255,255,0.3);
 }
 
 /* CONTEÚDO */
 #content {
   position: absolute;
   top: 120px;
-  left: 200px;
+  left: 300px;
   width: calc(100% - 300px);
   height: calc(100% - 120px);
   overflow-y: auto;
@@ -60,25 +70,8 @@ html, body {
   margin-bottom: 30px;
 }
 
-#sidebar {
-  background: url("../img/menu-vertical.jpg") no-repeat;
-  background-size: cover;
-  background-position: center top;
-}
-
-#topbar {
-  background: url("../img/banner-top.jpg") no-repeat;
-  background-size: cover;
-  background-position: center;
-}
-
-body {
-  overflow-x: hidden;
-}
-
 img {
   max-width: 100%;
   height: auto;
   display: block;
 }
-
