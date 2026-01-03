@@ -12,18 +12,30 @@ html, body {
 
 /* MENU LATERAL */
 #sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 300px;
+  height: 100vh;
+  background: #333;
   display: flex;
   flex-direction: column;
 }
 
 .menu-btn {
   flex: 1;
+  width: 100%;
 }
-
 
 /* BANNER SUPERIOR */
 #topbar {
+  position: fixed;
+  top: 0;
+  left: 300px;
+  height: 120px;
+  width: calc(100% - 300px);
   display: flex;
+  background: #555;
 }
 
 .top-btn {
@@ -31,12 +43,11 @@ html, body {
   height: 100%;
 }
 
-
 /* CONTEÚDO */
 #content {
   position: absolute;
   top: 120px;
-  left: 300px;
+  left: 200px;
   width: calc(100% - 300px);
   height: calc(100% - 120px);
   overflow-y: auto;
@@ -49,4 +60,25 @@ html, body {
   margin-bottom: 30px;
 }
 
+#sidebar {
+  background: url("../img/menu-vertical.jpg") no-repeat;
+  background-size: cover;
+  background-position: center top;
+}
+
+#topbar {
+  background: url("../img/banner-top.jpg") no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
 
