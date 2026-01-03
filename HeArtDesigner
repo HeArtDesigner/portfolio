@@ -1,0 +1,112 @@
+/portfolio
+ ├─ index.html
+ ├─ css/
+ │   └─ style.css
+ └─ img/
+     ├─ menu-vertical.jpg
+     ├─ banner-top.jpg
+     ├─ sample01.jpg
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<title>Portfolio</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<!-- MENU LATERAL -->
+<nav id="sidebar">
+  <a href="#work1" class="menu-btn"></a>
+  <a href="#work2" class="menu-btn"></a>
+  <a href="#work3" class="menu-btn"></a>
+</nav>
+
+<!-- BANNER SUPERIOR -->
+<header id="topbar">
+  <a href="#home" class="top-btn"></a>
+  <a href="#about" class="top-btn"></a>
+  <a href="#works" class="top-btn"></a>
+  <a href="#contact" class="top-btn"></a>
+</header>
+
+<!-- CONTEÚDO -->
+<main id="content">
+  <section id="work1">
+    <img src="img/sample01.jpg" alt="">
+  </section>
+
+  <section id="work2">
+    <img src="img/sample01.jpg" alt="">
+  </section>
+
+  <section id="work3">
+    <img src="img/sample01.jpg" alt="">
+  </section>
+</main>
+
+</body>
+</html>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  overflow: hidden; /* remove scroll geral */
+  font-family: sans-serif;
+}
+
+/* MENU LATERAL */
+#sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 120px;
+  height: 100vh;
+  background: url("../img/menu-vertical.jpg") no-repeat center top;
+  background-size: cover;
+}
+
+.menu-btn {
+  display: block;
+  width: 100%;
+  height: 33.33%; /* divide imagem em áreas clicáveis */
+}
+
+/* BANNER SUPERIOR */
+#topbar {
+  position: fixed;
+  top: 0;
+  left: 120px;
+  height: 120px;
+  width: calc(100% - 120px);
+  background: url("../img/banner-top.jpg") no-repeat center;
+  background-size: cover;
+}
+
+.top-btn {
+  display: inline-block;
+  width: 25%;
+  height: 100%;
+}
+
+/* CONTEÚDO */
+#content {
+  position: absolute;
+  top: 120px;
+  left: 120px;
+  width: calc(100% - 120px);
+  height: calc(100% - 120px);
+  overflow-y: auto;   /* único scroll */
+  overflow-x: hidden;
+  padding: 20px;
+}
+
+/* CONTEÚDO INTERNO */
+#content section {
+  margin-bottom: 40px;
+}
